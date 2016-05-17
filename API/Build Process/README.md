@@ -2,24 +2,24 @@
 
 The build process begins with a issuing a command via the [mmbox](https://github.com/mmbot/mmbot) via [Slack](https://slack.com/).
 
-`TODO: Enter sample commands here`
+`(TODO: Enter sample commands here)`
 
 Team City detects the command and begins the build process by pulling in the source from the repo(s). Tests are run to ensure integration and unit testing before deploying to Amazon.
 
 The build process copies serveral Amazon Machine Image's (AMI) during each deployment and places them on individual Elastic Cloud Compute (EC2) instances.
 
-(TODO: which stack does the build process copy to?)
+`(TODO: which stack does the build process copy to?)`
 
 Note: The SQL server instance does not get rebuilt on each deployment. (TODO: find out if anything else is persistent, i.e. ELB, HAProxies, etc.)
 
-(TODO: explain the 'swap' process in detail.)
+`(TODO: explain the 'swap' process in detail.)`
 
 ##AWS Assets
 
 There are multiple asset groups which form production, testing and demo stacks. Each stack is a replication of each other.
-(TODO: find out if there are size differences between stacks.)
+`(TODO: find out if there are size differences between stacks.)`
 
-(TODO: explain [Consul](https://www.consul.io/).)
+`(TODO: explain [Consul](https://www.consul.io/).)`
 
 In each stack, there are two Elastic Load Balancers (ELB) that sit in front of a virtual private cloud (VPC). The VPC is split into two availability zones (AZ) and subdivided as subnets. 
 Those subnets and their hosts are described as follows:
