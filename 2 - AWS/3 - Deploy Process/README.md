@@ -1,6 +1,4 @@
-#Build Process
-
-The build process begins with a issuing a command via the [mmbox](https://github.com/mmbot/mmbot) via [Slack](https://slack.com/).
+The deploy process begins with a issuing a command via the [mmbox](https://github.com/mmbot/mmbot) via [Slack](https://slack.com/).
 
 ```
 deploy destroy <version>
@@ -51,13 +49,10 @@ version list
 wake up <stackName>
 ```
 
-Team City detects the command and begins the build process by pulling in the source from the repo(s). Tests are run to ensure integration and unit testing before deploying to Amazon.
+##Packer
+TODO: Explain packer
 
-The build process copies serveral Amazon Machine Image's (AMI) during each deployment and places them on individual Elastic Cloud Compute (EC2) instances.
+##Cloud Formation
+TODO: Explain CloudFormation
 
-`(TODO: which stack does the build process copy to?)`
-
-Note: The SQL server instance does not get rebuilt on each deployment. (TODO: find out if anything else is persistent, i.e. ELB, HAProxies, etc.)
-
-`(TODO: explain the 'swap' process in detail.)`
-
+Once complete, the deployment should be finished building and reside in the 'smoke' slot. Using 'Consul' we determine which IP's based on revision need to be pointed to by the HAProxy configurations. 
