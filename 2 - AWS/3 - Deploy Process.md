@@ -52,6 +52,7 @@ wake up <stackName>
 ```
 
 ##Packer
+We're using [Packer IO](https://www.packer.io/) on our local build agents.
 TODO: Explain packer
 
 ##Cloud Formation
