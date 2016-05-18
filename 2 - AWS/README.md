@@ -1,4 +1,6 @@
-#AWS Assets
+#Amazon Web Services Assets
+
+Amazon Web Services (AWS) forms the backbone of the Allied Payment network.
 
 There are multiple asset groups which form production, testing and demo stacks. Each stack is a replication of each other.
 `(TODO: find out if there are size differences between stacks.)`
