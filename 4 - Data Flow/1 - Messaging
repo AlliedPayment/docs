@@ -1,0 +1,13 @@
+#Messaging
+
+##RabbitMQ
+RabbitMQ is a queuing service run on a Linux box in our VPC. NServiceBus sends messages via client to the queues.
+
+https://www.rabbitmq.com/
+
+##NServiceBus
+NServiceBus is a service bus that sends messages with RabbitMQ as it's persistence medium.
+
+Workers use the bus (and therefore RabbitMQ) to process deferred work.
+
+http://particular.net/nservicebus
