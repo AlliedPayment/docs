@@ -22,7 +22,7 @@ Simply put, a hotfix is one or more commits made to `Master` (or `Final`) either
 ##Releasing to Final
 To release to final, merge from `Dev` to `Final` if the tip of `Dev` (aka `HEAD`) is where you'd like to release from. If you'd like to release from a different point in Dev's history, ask for help as we can make this happen.
 
-##When in doubt
+##When in Doubt
 When in doubt, your changes should go to `Dev`.
 
 ##Pull-Requests (PR)
@@ -35,3 +35,5 @@ Pull-requests offer a nice way to stage a larger feature outside of `Dev` by usi
 - Go to the PR tab of the repo you're working with.
 - Create a new PR. Choose `Dev` as your base and your new branch as the other branch.
 - Give it a name and add a description in the conversation area.
+
+What you'll end oup with is a way for other to code review the changes and see the full scope of what will be affected. When you merge the branch into `Dev`, the pull request will be closed automatically. If you named your PR properly, Waffle will have moved the ticket statuses for you.
