@@ -53,3 +53,7 @@ Git doesn't use integers as revisions, rather it uses a SHA1 hash. If you'd like
 `git cherry-pick <the SHA1 hash of the commit>`
 
 If a commit cannot be found, try running this to refresh your list of references: `git fetch --all`.
+
+##Team City (TC) Integration
+We have TC set to auto build pull requests, `Dev` and `Final`. If we need to create an ad-hoc branch to build not otherwise automatically built, we just need to adjust TC to look at a different branch temporarily.
+
