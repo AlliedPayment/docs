@@ -58,4 +58,4 @@ If a commit cannot be found, try running this to refresh your list of references
 We have TC set to auto build pull requests, `Master`, `Dev` and `Final`. If we need to create an ad-hoc branch to build not otherwise automatically built, we just need to adjust TC to look at a different branch temporarily.
 
 ##Waffle/GitHub Issues
-GitHub issues is a lightweight unit of work tracker.
+GitHub issues is a lightweight unit of work tracker. We use Waffle to help visualize and manage feature not included in GitHub issues.
