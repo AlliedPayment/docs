@@ -1,4 +1,4 @@
-#Branching Strategry
+#Branching Strategy
 
 Our branching strategy includes both infinite and short-lived branches.
 
@@ -14,9 +14,24 @@ Short-lived branches typically die when they are merged into `Dev` (or wherever 
 - `Final` - (Infinite) - This branch represents a snapshot of `Dev` before it goes into `Master`. Think of this a release candidate. `Final` is a snapshot of `Dev` but work continues on `Dev` without disrupting the release.
 - `Feature/*branchname*` (Short-lived) - Features that are not yet ready for inclusion in the next release should live on a feature branch. When complete they are merged into the `Dev` branch.
 
-
-
- 
+>Reminder that merging between branches is directonal. If you merge from `Dev` into `Final`, you're moving commits that `Final` has into `Dev`. `Final` remains unchanged. If you'd like to merge `Final` into `Dev`, that becomes another action you must complete.
 
 ##Hotfix
-Simply put, a hotfix is one or more commits made to `Master` either via directly committing or via a `Pull-Request`. If a hotfix is pushed to `Master` on Github, then `Master` needs to be merged into `Dev` and/or `Final`.
+Simply put, a hotfix is one or more commits made to `Master` (or `Final`) either via directly committing or via a `Pull-Request`. If a hotfix is pushed to `Master` on Github, then `Master` needs to be merged into `Dev` and/or `Final`.
+
+##Releasing to Final
+To release to final, merge from `Dev` to `Final` if the tip of `Dev` (aka `HEAD`) is where you'd like to release from. If you'd like to release from a different point in Dev's history, ask for help as we can make this happen.
+
+##When in doubt
+When in doubt, your changes should go to `Dev`.
+
+##Pull-Requests (PR)
+Pull-requests offer a nice way to stage a larger feature outside of `Dev` by using a `feature` branch. To begin a feature, complete the following:
+
+- Create a new issue via Waffle or GitHub directly (note the issue number)
+- Create a new local branch based off of `Dev` (`git checkout -b feature/foo#123`) <== issue 123
+- Make a trivial commit on your new branch such as `Init Hello World`. You need at least one commit to create a PR.
+- Push your new branch to `GitHub` (`git push origin feature/foo#123)
+- Go to the PR tab of the repo you're working with.
+- Create a new PR. Choose `Dev` as your base and your new branch as the other branch.
+- Give it a name and add a description in the conversation area.
