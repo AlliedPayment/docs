@@ -1,6 +1,8 @@
 #Branching Strategy
 
-Our branching strategy includes both infinite and short-lived branches.
+Our branching strategy includes both infinite and short-lived branches. Note that we are moving away from a single monolithic repository as needed. All of our repos can be found at the root of the Allied account: https://github.com/AlliedPayment
+
+Branching exists within the context of repository. So `BillPay` will have the branching strategy that follows. For other repos in our catalog, it may vary.
 
 ##Infinite Branches
 Infinite branches never end their life. 
@@ -46,7 +48,7 @@ Pull-requests offer a nice way to stage a larger feature outside of `Dev` by usi
 
 What you'll end oup with is a way for other to code review the changes and see the full scope of what will be affected. When you merge the branch into `Dev`, the pull request will be closed automatically. If you named your PR properly, Waffle will have moved the ticket statuses for you.
 
->Tip: When you send a PR to `Dev`, Team City will start building it for you automagically.
+>Tip: When you send a PR to `Dev`, Team City will start building it for you automagically. (Valid for the `BillPay` repo only.)
 
 ##Cherry-picking
 
@@ -59,5 +61,9 @@ If a commit cannot be found, try running this to refresh your list of references
 ##Team City (TC) Integration
 We have TC set to auto build pull requests to `Dev` and any commits to `Master`, `Dev` and `Final`. If we need to create an ad-hoc branch to build not otherwise automatically built, we will need to adjust TC to look at a different branch temporarily.
 
+>Valid for the `BillPay` repo only.
+
 ##Waffle/GitHub Issues
-GitHub issues is a lightweight unit of work tracker. We use Waffle to help visualize and manage feature not included in GitHub issues.
+GitHub issues is a lightweight unit of work tracker. Issues are tracked on a per repo basis. We use Waffle to help visualize and manage feature not included in GitHub issues. To view the `BillPay` issues, visit: https://waffle.io/AlliedPayment/BillPay
+
+For any other repo, visit the waffle root: https://waffle.io/
