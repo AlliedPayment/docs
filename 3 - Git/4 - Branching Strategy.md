@@ -52,7 +52,7 @@ What you'll end oup with is a way for other to code review the changes and see t
 
 ##Cherry-picking
 
-Git doesn't use integers as revisions, rather it uses a SHA1 hash. If you'd like to get a single commit from another branch and drop it onto another branch, you can perform a `cherry-pick`. You will need to run the following command:
+Git doesn't use integers as revisions, rather it uses a SHA1 hash. If you'd like to get a single commit from another branch and drop it onto another branch, you can perform a `cherry-pick`. You will need to run the following command from the branch you wish to pull the commit into:
 
 `git cherry-pick <the SHA1 hash of the commit>`
 
