@@ -2,7 +2,7 @@
 
 Our branching strategy includes both infinite and short-lived branches. Note that we are moving away from a single monolithic repository as needed. All of our repos can be found at the root of the Allied account: https://github.com/AlliedPayment
 
-Branching exists within the context of repository. So `BillPay` will have the branching strategy that follows. For other repos in our catalog, it may vary.
+Branching exists within the context of a repository. So `BillPay` will have the branching strategy that follows. For other repos in our catalog, it may vary.
 
 ##Infinite Branches
 Infinite branches never end their life. 
