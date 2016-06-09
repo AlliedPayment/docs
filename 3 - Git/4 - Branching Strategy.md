@@ -14,7 +14,13 @@ Short-lived branches typically die when they are merged into `Dev` (or wherever 
 - `Final` - (Infinite) - This branch represents a snapshot of `Dev` before it goes into `Master`. Think of this a release candidate. `Final` is a snapshot of `Dev` but work continues on `Dev` without disrupting the release.
 - `Feature/*branchname*` (Short-lived) - Features that are not yet ready for inclusion in the next release should live on a feature branch. When complete they are merged into the `Dev` branch.
 
+A quick review of the merge command:
+- First change to the branch you want to merge into (the target) i.e. `git checkout dev`
+- Run a simple merge i.e. `git merge master`
+
 >Reminder that merging between branches is directonal. If you merge from `Dev` into `Final`, you're moving commits that `Final` has into `Dev`. `Final` remains unchanged. If you'd like to merge `Final` into `Dev`, that becomes another action you must complete.
+
+>Pull before you push by running something like `git pull origin master` which means update my local `Dev` from GitHub. Conversely, you can push by running `git push origin dev` (push my local dev to GitHub).
 
 ##Hotfix
 Simply put, a hotfix is one or more commits made to `Master` (or `Final`) either via directly committing or via a `Pull-Request`. If a hotfix is pushed to `Master` on Github, then `Master` needs to be merged into `Dev` and/or `Final`.
