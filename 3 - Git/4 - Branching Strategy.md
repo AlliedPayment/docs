@@ -37,3 +37,11 @@ Pull-requests offer a nice way to stage a larger feature outside of `Dev` by usi
 - Give it a name and add a description in the conversation area.
 
 What you'll end oup with is a way for other to code review the changes and see the full scope of what will be affected. When you merge the branch into `Dev`, the pull request will be closed automatically. If you named your PR properly, Waffle will have moved the ticket statuses for you.
+
+##Cherry-picking
+
+Git doesn't use integers as revisions, rather it uses a SHA1 hash. If you'd like to get a single commit from another branch and drop it onto another branch, you can perform a `cherry-pick`. You will need to run the following command:
+
+`git cherry-pick <the SHA1 hash of the commit>`
+
+If a commit cannot be found, try running this to refresh your list of references: `git fetch --all`.
