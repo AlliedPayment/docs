@@ -46,7 +46,7 @@ Pull-requests offer a nice way to stage a larger feature outside of `Dev` by usi
 - Create a new PR. Choose `Dev` as your base and your new branch as the other branch.
 - Give it a name and add a description in the conversation area.
 
-What you'll end oup with is a way for other to code review the changes and see the full scope of what will be affected. When you merge the branch into `Dev`, the pull request will be closed automatically. If you named your PR properly, Waffle will have moved the ticket statuses for you.
+What you'll end up with is a way for other to code review the changes and see the full scope of what will be affected. When you merge the branch into `Dev`, the pull request will be closed automatically. If you named your PR properly, Waffle will have moved the ticket statuses for you.
 
 >Tip: When you send a PR to `Dev`, Team City will start building it for you automagically. (Valid for the `BillPay` repo only.)
 
