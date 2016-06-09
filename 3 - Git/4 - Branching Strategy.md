@@ -46,6 +46,8 @@ Pull-requests offer a nice way to stage a larger feature outside of `Dev` by usi
 
 What you'll end oup with is a way for other to code review the changes and see the full scope of what will be affected. When you merge the branch into `Dev`, the pull request will be closed automatically. If you named your PR properly, Waffle will have moved the ticket statuses for you.
 
+>Tip: When you send a PR to `Dev`, Team City will start building it for you automagically.
+
 ##Cherry-picking
 
 Git doesn't use integers as revisions, rather it uses a SHA1 hash. If you'd like to get a single commit from another branch and drop it onto another branch, you can perform a `cherry-pick`. You will need to run the following command:
@@ -55,7 +57,7 @@ Git doesn't use integers as revisions, rather it uses a SHA1 hash. If you'd like
 If a commit cannot be found, try running this to refresh your list of references: `git fetch --all`.
 
 ##Team City (TC) Integration
-We have TC set to auto build pull requests, `Master`, `Dev` and `Final`. If we need to create an ad-hoc branch to build not otherwise automatically built, we just need to adjust TC to look at a different branch temporarily.
+We have TC set to auto build pull requests to `Dev` and any commits to `Master`, `Dev` and `Final`. If we need to create an ad-hoc branch to build not otherwise automatically built, we will need to adjust TC to look at a different branch temporarily.
 
 ##Waffle/GitHub Issues
 GitHub issues is a lightweight unit of work tracker. We use Waffle to help visualize and manage feature not included in GitHub issues.
