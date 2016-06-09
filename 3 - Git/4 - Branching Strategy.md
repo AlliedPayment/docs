@@ -19,6 +19,8 @@ Short-lived branches typically die when they are merged into `Dev` (or wherever 
 ##Hotfix
 Simply put, a hotfix is one or more commits made to `Master` (or `Final`) either via directly committing or via a `Pull-Request`. If a hotfix is pushed to `Master` on Github, then `Master` needs to be merged into `Dev` and/or `Final`.
 
+>It is a very important step to merge any hotfixes into `Dev` and/or `Final` to ensure we keep them up-to-date.
+
 ##Releasing to Final
 To release to final, merge from `Dev` to `Final` if the tip of `Dev` (aka `HEAD`) is where you'd like to release from. If you'd like to release from a different point in Dev's history, ask for help as we can make this happen.
 
