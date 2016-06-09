@@ -10,7 +10,7 @@ Short-lived branches typically die when they are merged into `Dev` (or wherever 
 
 ##Branching
 - `Master` (Infinite) - This branch represents what is in production at all times. Only `Hotfixes` should be branched directly from Master.
-- `Dev` (Infinite) - This branch represents changes queued to go into production. This is akin to the `Trunk` branch from SVN. In theory `Master` will never be ahead of `Dev` except in the case of a hotfix (see [#](Hotfix) below).
+- `Dev` (Infinite) - This branch represents changes queued to go into production. This is akin to the `Trunk` branch from SVN. In theory `Master` will never be ahead of `Dev` except in the case of a hotfix (see [#Hotfix]() below).
 - `Final` - (Infinite) - This branch represents a snapshot of `Dev` before it goes into `Master`. Think of this a release candidate. `Final` is a snapshot of `Dev` but work continues on `Dev` without disrupting the release.
 - `Feature/*branchname*` (Short-lived) - Features that are not yet ready for inclusion in the next release should live on a feature branch. When complete they are merged into the `Dev` branch.
 
@@ -31,7 +31,7 @@ Pull-requests offer a nice way to stage a larger feature outside of `Dev` by usi
 - Create a new issue via Waffle or GitHub directly (note the issue number)
 - Create a new local branch based off of `Dev` (`git checkout -b feature/foo#123`) <== issue 123
 - Make a trivial commit on your new branch such as `Init Hello World`. You need at least one commit to create a PR.
-- Push your new branch to `GitHub` (`git push origin feature/foo#123)
+- Push your new branch to `GitHub` (`git push origin feature/foo#123`)
 - Go to the PR tab of the repo you're working with.
 - Create a new PR. Choose `Dev` as your base and your new branch as the other branch.
 - Give it a name and add a description in the conversation area.
