@@ -4,7 +4,7 @@
 - [Tour Of Heroes][tourOfHeros]
 - [Build a Better Angular 2 Application with Redux and ngrx][ngRedux]
 
-##[ngConf Videos][ngConf]
+##ngConf Videos
 - [An Angular 2 Force Awakens - John Papa][ngForce]
 - [Angular 2 for the rest of us - Scott Moss][SecretWeapon]
 - [Typescript: Angular 2's Secret Weapon - Dan Wahlin][SecretWeapon]
@@ -12,8 +12,8 @@
 - [Progressive Web Apps - Jeff Cross, Alex Rickabaugh][Progressive]
 - [Reactive Angular2 with ngRx - Rob Womald][ngRx]
 - [Automated Angular 2 Style Checking with Codelyzer - Minko Gechev][ng2Style]
-  
 
+[View more @ ngConf on YouTube][ngConf] 
 
 [ngForce]: https://youtu.be/WAPQF_GA7Qg?list=PLM4Zie542aeBrt9agADCiEMt-Hy7f1vAJ 
 [ngRestOfUs]: https://www.youtube.com/watch?v=GE5gZX6V6Zs
