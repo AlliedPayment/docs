@@ -5,7 +5,11 @@ The idea is to have a way to have a controlled procedure to take all services of
 The goal is to have the customer have a friendly message for requests to the UI and the admin during the maintenance window. The API needs to return a 503 to signal Malauzai and/or other direct integration partners that the API is down. Coordination with the partners is needed.
 
 ##General Approach
-The general approach proposed is to perform maintenance on Final, then Mock. Those can be coordinated internally. The time it takes to upgrade Mock will need to be doubled in order to accomodate SQL-A and SQL-B during the production maintenance window. The maintenance window should take a max of one hour. If the time on Mock takes more than 30 minutes, we may need to reduce the number of updates and push them to a following maintenance window.
+The general approach proposed is to perform maintenance on Final, then Mock. Those can be coordinated internally. 
+
+If database maintenance is required, the time it takes to upgrade Mock will need to be doubled in order to accomodate SQL-A and SQL-B during the production maintenance window. The maintenance window should take a max of one hour. If the time on Mock takes more than 30 minutes, we may need to reduce the number of updates and push them to a following maintenance window.
+
+Wednesday's are the most likely times for maintenance windows.
 
 ##Service Take Down/Restore Procedure
 1. Coordinate with any partners that are directly integrating.
@@ -24,3 +28,10 @@ The general approach proposed is to perform maintenance on Final, then Mock. Tho
     5. Set a Consul key value for maintenance (TODO: get from Brian), this will signal HAProxy to restore outside traffic to normal services.
     
 > Note: At some point we may want to automate this via a script.
+
+##TODO's
+
+Things we need to do in order to execute the maintenance successfully:
+
+- [ ] Get HAProxy and Consul configured for the maintenance ability (Brian)
+- [ ] Get a baseline time of how long it takes to take down/restore services to be used for future planning
