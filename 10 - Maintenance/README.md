@@ -33,5 +33,4 @@ Wednesday's are the most likely times for maintenance windows.
 
 Things we need to do in order to execute the maintenance successfully:
 
-- [ ] Get HAProxy and Consul configured for the maintenance ability (Brian)
-- [ ] Get a baseline time of how long it takes to take down/restore services to be used for future planning
+- [ ] https://github.com/AlliedPayment/BillPay/issues/117
