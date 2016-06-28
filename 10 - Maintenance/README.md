@@ -45,7 +45,6 @@ Run this to allow:
 ```
 curl -X PUT -d 'false' http://{consul-ip}:8500/v1/kv/maint/enabled/{environment}
 ```
-
 ===
 So for production: 
 ```
