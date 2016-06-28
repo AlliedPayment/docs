@@ -31,6 +31,8 @@ Wednesday's are the most likely times for maintenance windows.
 
 ##Disallow/reallow public requests
 
+You must run these commands from a machine inside the VPC that can talk to the environment required. You must also have `curl` installed. The command will alter `consul`'s key/value store which triggers an update with `consul-template` affecting `HAProxy`.
+
 Run this to disallow:
 ```
 curl -X PUT -d 'true' http://172.30.20.194:8500/v1/kv/maint/enabled/{environment}
@@ -42,4 +44,3 @@ Run this to allow:
 curl -X PUT -d 'false' http://172.30.20.194:8500/v1/kv/maint/enabled/{environment}
 ```
 
-You must run this from a machine inside the VPC that can talk to the environment required. You must also have `curl` installed.
