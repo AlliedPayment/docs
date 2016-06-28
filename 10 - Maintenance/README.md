@@ -29,8 +29,12 @@ Wednesday's are the most likely times for maintenance windows.
     
 > Note: At some point we may want to automate this via a script.
 
-##TODO's
+##Disallow/reallow public requests
 
-Things we need to do in order to execute the maintenance successfully:
+Run this to disallow:
+`curl -X PUT -d 'false' http://172.30.20.194:8500/v1/kv/maint/enabled/{environment}` <== `prod` or `final`
 
-- [ ] https://github.com/AlliedPayment/BillPay/issues/117
+Run this to allow:
+`curl -X PUT -d 'false' http://172.30.20.194:8500/v1/kv/maint/enabled/{environment}`
+
+You must run this from a machine inside the VPC that can talk to the environment required. You must also have `curl` installed.
