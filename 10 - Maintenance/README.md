@@ -32,9 +32,14 @@ Wednesday's are the most likely times for maintenance windows.
 ##Disallow/reallow public requests
 
 Run this to disallow:
-`curl -X PUT -d 'false' http://172.30.20.194:8500/v1/kv/maint/enabled/{environment}` <== `prod` or `final`
+```
+curl -X PUT -d 'true' http://172.30.20.194:8500/v1/kv/maint/enabled/{environment}
+```
+`prod` or `final`
 
 Run this to allow:
-`curl -X PUT -d 'false' http://172.30.20.194:8500/v1/kv/maint/enabled/{environment}`
+```
+curl -X PUT -d 'false' http://172.30.20.194:8500/v1/kv/maint/enabled/{environment}
+```
 
 You must run this from a machine inside the VPC that can talk to the environment required. You must also have `curl` installed.
