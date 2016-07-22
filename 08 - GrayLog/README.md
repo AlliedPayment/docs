@@ -2,7 +2,10 @@
 
 GrayLog is a third-party logger used for several operational purposes.
 
-GrayLog can be accessed by visiting: http://logging.service.consul/
+GrayLog can be accessed by visiting: http://logging.service.consul/ or http://logging.service.beta/
+
+##Basic Error Searching
+`SourceContext:webrequest AND response-statuscode:>=500`
 
 ##MVC UI
 The MVC UI is dumping error logs to GrayLog and is being tagged with `MVCUI`.
