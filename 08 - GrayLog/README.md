@@ -7,6 +7,9 @@ GrayLog can be accessed by visiting: http://logging.service.consul/ or http://lo
 ##Basic Error Searching
 `SourceContext:webrequest AND response-statuscode:>=500`
 
+##Basic SQL Searching
+`SourceContext:sql`
+
 ##MVC UI
 The MVC UI is dumping error logs to GrayLog and is being tagged with `MVCUI`.
 
