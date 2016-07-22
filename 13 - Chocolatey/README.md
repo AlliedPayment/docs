@@ -2,7 +2,7 @@
 
 Chocolatey is a convenience app that installs local apps onto your machine.
 
-The main site:
+The main site: https://chocolatey.org/
 
 You can install via an administrator command prompt by running:
 ```
