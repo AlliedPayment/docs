@@ -11,3 +11,5 @@ NServiceBus.Host.exe /install /servicename:final.allied.normal.1 /endpointName:f
 
 ##Visual Studio
 Use Visual Studio to run a local worker by configuring your app like the image below:
+
+![nservicebus](assets/nservicebus.png)
