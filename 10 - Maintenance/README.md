@@ -23,9 +23,9 @@ Wednesday's are the most likely times for maintenance windows.
 4. Restore services by performing the following:
     1. Enable all jobs on the Scheduled Task box.
     2. Enable all worker services on each worker box.
-    3. Take both API/UI boxes out of Consul maint mode by running `consul maint --disable` on each box locally.
+    3. ~~Take both API/UI boxes out of Consul maint mode by running `consul maint --disable` on each box locally.~~
     4. Smoke test the services via the UI from one of the API/UI boxes.
-    5. Set a Consul key value for maintenance (TODO: get from Brian), this will signal HAProxy to restore outside traffic to normal services.
+    5. Re-enable the service via `curl` from the next section, this will signal HAProxy to restore outside traffic to normal services.
     
 > Note: At some point we may want to automate this via a script.
 
