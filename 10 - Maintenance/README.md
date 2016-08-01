@@ -16,7 +16,7 @@ Wednesday's are the most likely times for maintenance windows.
 2. Take down services by performing the following at the beginning of the window:
     1. Run the `curl` command from the next section, this will signal HAProxy to redirect outside traffic to our friendly messaging.
     2. Verify that traffic is being redirected for the UI's.
-    3. Place both API/UI boxes into Consul maint mode by running `consul maint --enable` on each box locally.
+    3. ~~Place both API/UI boxes into Consul maint mode by running `consul maint --enable` on each box locally.~~ I think this might not be necessary.
     4. Disable all worker services on each worker box (right now there are two worker boxes).
     5. Disable all jobs on the Scheduled Task box.
 3. Perform needed maintenance.
