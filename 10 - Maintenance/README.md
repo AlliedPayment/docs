@@ -14,7 +14,7 @@ Wednesday's are the most likely times for maintenance windows.
 ##Service Take Down/Restore Procedure
 1. Coordinate with any partners that are directly integrating.
 2. Take down services by performing the following at the beginning of the window:
-    1. Set a Consul key value for maintenance (TODO: get from Brian), this will signal HAProxy to redirect outside traffic to our friendly messaging.
+    1. Run the `curl` command from the next section, this will signal HAProxy to redirect outside traffic to our friendly messaging.
     2. Verify that traffic is being redirected for the UI's.
     3. Place both API/UI boxes into Consul maint mode by running `consul maint --enable` on each box locally.
     4. Disable all worker services on each worker box (right now there are two worker boxes).
