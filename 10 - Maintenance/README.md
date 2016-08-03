@@ -35,7 +35,7 @@ You must run these commands from a machine inside the VPC that can talk to the e
 
 Run this to disallow:
 ```
-curl -X PUT -d 'true' http://{consul-ip}:8500/v1/kv/maint/enabled/{environment}
+curl -X PUT -d true http://{consul-ip}:8500/v1/kv/maint/enabled/{environment}
 ```
 `172.16.14.5` <== prod consul
 `172.30.20.194` <== final consul
