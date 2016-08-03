@@ -43,16 +43,16 @@ curl -X PUT -d 'true' http://{consul-ip}:8500/v1/kv/maint/enabled/{environment}
 
 Run this to allow:
 ```
-curl -X PUT -d 'false' http://{consul-ip}:8500/v1/kv/maint/enabled/{environment}
+curl -X PUT -d false http://{consul-ip}:8500/v1/kv/maint/enabled/{environment}
 ```
 ===
 So for production: 
 ```
-curl -X PUT -d 'true' http://172.16.14.5:8500/v1/kv/maint/enabled/prod
+curl -X PUT -d true http://172.16.14.5:8500/v1/kv/maint/enabled/prod
 ```
 and
 ```
-curl -X PUT -d 'false' http://172.16.14.5:8500/v1/kv/maint/enabled/prod
+curl -X PUT -d false http://172.16.14.5:8500/v1/kv/maint/enabled/prod
 ```
 
 Once everything is done, do an IISRECYCLE on the api servers
