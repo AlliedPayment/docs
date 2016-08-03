@@ -56,4 +56,6 @@ curl -X PUT -d false http://172.16.14.5:8500/v1/kv/maint/enabled/prod
 ```
 
 Once everything is done, do an IISRECYCLE on the api servers
+Located in c:\tools\iisrecycle\iisrecycle.exe -- Run as admin
+
 
