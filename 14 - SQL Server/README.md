@@ -42,3 +42,19 @@ Docs: https://ola.hallengren.com/sql-server-index-and-statistics-maintenance.htm
 ##Clear wait stats
 
 `DBCC SQLPERF ('sys.dm_os_wait_stats', CLEAR);`
+
+##Triage scripts
+`sp_AskBrent` - Snapshot of the servers' current bottleneck
+- Example: `exec sp_AskBrent @ExpertMode = 1, @Seconds = 30`
+
+`sp_WhoIsActive` - Current activity
+- Example: `exec sp_WhoIsActive @get_plans = 1`
+
+`sp_BlitzCache` - Analyzes most resource consuming queries in the plan cache
+- Example: `exec sp_BlitzCache @sort_order='cpu'`
+
+`sp_BlitzIndex` - Looks at index health
+- Example: `exec sp_BlitzIndex @mode = 0` (or `4`)
+
+`SP_Blitz` - Prioritized list of heat issues
+- Example: `exec sp_Blitz`
