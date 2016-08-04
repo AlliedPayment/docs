@@ -38,3 +38,7 @@ EXECUTE dbo.IndexOptimize
 ```
 
 Docs: https://ola.hallengren.com/sql-server-index-and-statistics-maintenance.html
+
+##Clear wait stats
+
+`DBCC SQLPERF ('sys.dm_os_wait_stats', CLEAR);`
