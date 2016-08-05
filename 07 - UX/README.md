@@ -1,5 +1,13 @@
 #Angular 2 / Typescript Resources
 
+##Offical Documentation         
+######(it's pretty darn good so check it out!)
+###Docs        
+- [Angular.io Docs][angularDocs]         
+
+###Style Guide
+- [Angular.io Style Guide][angularStyle] 
+
 ##Tutorials / Blog Posts
 - [Tour Of Heroes][tourOfHeros]
 - [Build a Better Angular 2 Application with Redux and ngrx][ngRedux]
@@ -15,6 +23,8 @@
 
 [View more @ ngConf on YouTube][ngConf] 
 
+[angularDocs]: https://angular.io/docs/ts/latest/
+[angularDocs]: https://angular.io/docs/ts/latest/guide/style-guide.html
 [ngForce]: https://youtu.be/WAPQF_GA7Qg?list=PLM4Zie542aeBrt9agADCiEMt-Hy7f1vAJ 
 [ngRestOfUs]: https://www.youtube.com/watch?v=GE5gZX6V6Zs
 [SecretWeapon]: https://youtu.be/e3djIqAGqZo 
