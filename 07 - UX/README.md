@@ -7,6 +7,7 @@
 
 ##Tutorials / Blog Posts
 - [Tour Of Heroes][tourOfHeros]
+- [ngRx/store in 10 minutes (Egghead.io)][ngStore]
 - [Build a Better Angular 2 Application with Redux and ngrx][ngRedux]
 
 ##ngConf Videos
@@ -32,3 +33,4 @@
 [ng2Style]: https://youtu.be/bci-Z6nURgE
 [tourOfHeros]: https://angular.io/docs/ts/latest/tutorial/index.html 
 [ngRedux]: http://onehungrymind.com/build-better-angular-2-application-redux-ngrx/
+[ngStore]: https://egghead.io/lessons/angular-2-ngrx-store-in-10-minutes 
