@@ -61,3 +61,4 @@ How To:
 [AWS]: https://aws.amazon.com/ 
 [mmbot]: https://github.com/AlliedPayment/mmbot "Allied's Slack Chatbot"
 [build server]: http://buildserver/overview.html
+[final builder settings]:http://buildserver/admin/editBuild.html?id=buildType:BillPay_Development_FinalBranchBuilder
