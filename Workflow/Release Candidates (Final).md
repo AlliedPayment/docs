@@ -39,7 +39,8 @@ How To:
 - From here you can see the current triggers for this branch.
     - The trigger we are concerned with is a Scheduled Trigger.
         - It's configured to run everyday @ 3am regardless of pending changes.
-        - TeamCity will perform a "clean checkout" of the final branch and build billpay.
+        - TeamCity will perform a "clean checkout" of the final branch and build billpay.        
+
 ---
 
 
@@ -60,3 +61,4 @@ How To:
 [AWS]: https://aws.amazon.com/ 
 [mmbot]: https://github.com/AlliedPayment/mmbot "Allied's Slack Chatbot"
 [build server]: http://buildserver/overview.html
+[final builder settings]:http://buildserver/admin/editBuild.html?id=buildType:BillPay_Development_FinalBranchBuilder
