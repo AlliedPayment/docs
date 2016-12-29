@@ -5,7 +5,7 @@ The new build is then manually deployed via Allied's chatbot [mmbot] to the fina
 
 ---
 
-## Merging work into [Final]()
+## Merging work into [Final](https://github.com/AlliedPayment/BillPay/tree/final)
 ### *Complete this at __end of the day__ on a  __daily__  basis*
 Tools Required:
 - Web Browser        
