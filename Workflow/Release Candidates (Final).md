@@ -6,7 +6,7 @@ The new build is then manually deployed via Allied's chatbot [mmbot] to the fina
 ---
 
 ## Merging work into [Final](https://github.com/AlliedPayment/BillPay/tree/final)
-### *Complete this at __end of the day__ on a  __daily__  basis*
+### *Complete this at the __end of the day__ on a  __daily__  basis*
 Tools Required:
 - Web Browser        
 - Source Control  (Git via [Github])
@@ -43,14 +43,40 @@ How To:
 
 ---
 
+## Release Checklist
 
+### *Complete this at the __end of each sprint__*
 
+- TODO: describe down merging process (master & admin)
 
+- TODO: describe changing **SprintNumber** build configuration parameters (TeamCity:Projects: *dev, final* builders )
 
+- TODO: describe merging work into final from dev (anything different than a nightly merge?)
 
+- TODO: describe ticket validation process (what tickets are in the sprint vs what tickets have code associated with it in the release candidate?)
 
+    - TODO: describe ticket reconciliation process (i.e. expected tickets do not match actual work done, now what?)
 
+- TODO: describe final testing and final issue management
 
+    - TODO: describe down merging final issues to dev
+    - TODO: describe ticket validation after final issues have been completed (tickets are all in Final and everything looks good now what?)
+
+- TODO: describe release process
+
+    - TODO: describe changing **SprintNumber** build configuration parameter (TeamCity:Projects: *master* builder )
+
+    - TODO: Merge release candidate to master
+
+    - TODO: Describe build flow (what happens where, and what to do if something fails e.g. *build, deploy to chef, packers*)
+
+    - TODO: describe deployment process (e.g. interacting with mmbot & what to do if it fails i.e. *too many instances causing, etc*)
+    
+    - TODO: describe SMOKE testing (what to do, how to do it, what are the bookmarklets required to get to smoke?)
+
+    - TODO: describe swapping smoke into production, and reverting back.
+    
+---
 
 
 
