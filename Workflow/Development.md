@@ -28,7 +28,7 @@ The previous sprint is put on a code freeze, and no more changes will be allowed
 
 CI will remain on the FB until the release is complete.
 Once the FB has been approved by QA it's merged into master, and deployed into production for smoke testing.
-After the release is complete CI will be reconfigured to build the new CSB into the QA environment. 
+After the release is complete CI will be reconfigured to build the new CSB into the QA environment, and QA can begin testing the CSB for the next release. 
 
 ### Admin
 
