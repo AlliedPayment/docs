@@ -25,8 +25,10 @@ Therefore, when a PR is merged a new deployment unit (DU) is created. Once creat
 
 When a sprint ends a new sprint branch is created for developers.
 The previous sprint is put on a code freeze, and no more changes will be allowed into the frozen branch (FB) unless the change has been requested by QA via a "final issue".
-However, CI will remain on the FB until the release is complete.
-Once the FB has been approved by QA it is merged into master, and deployed into production for smoke testing.
+
+CI will remain on the FB until the release is complete.
+Once the FB has been approved by QA it's merged into master, and deployed into production for smoke testing.
+After the release is complete CI will be reconfigured to build the new CSB into the QA environment. 
 
 ### Admin
 
