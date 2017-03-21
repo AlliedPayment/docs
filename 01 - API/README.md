@@ -1,9 +1,5 @@
-#API
+# API
 
-The API is the main application for Allied Payment services.
-
-API documentation is listed below:
-* [Allied Payment API Overview.pdf](assets/Allied Payment API Overview.pdf)
-* [API Examples v1.2.pdf](assets/API Examples v1.2.pdf)
-* [API Overview for SSOv2.2.pdf](assets/API Overview for SSOv2.2.pdf)
-* [iPay Bill Pay Services API USER GUIDE_2015.0.01.pdf](assets/iPay Bill Pay Services API USER GUIDE_2015.0.01.pdf)
+- [Allied Payment API Overview.pdf](https://github.com/AlliedPayment/Documentation/raw/master/01%20-%20API/assets/Allied%20Payment%20API%20Overview.pdf)
+- [API Examples v1.2.pdf](https://github.com/AlliedPayment/Documentation/raw/master/01%20-%20API/assets/API%20Examples%20v1.2.pdf)
+- [API Overview for SSOv2.2.pdf](https://github.com/AlliedPayment/Documentation/raw/master/01%20-%20API/assets/API%20Overview%20for%20SSOv2.2.pdf)
