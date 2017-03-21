@@ -14,7 +14,7 @@
     1. [Handle Authentication Response](#handle-authentication-response)
     1. [Get User Limits](#get-user-limits)
 
-1. [Create Payment](#create-payment)
+1. [Payment Creation](#payment-creation)
     1. [Collect Payment Information](#collect-payment-information-from-user)
     1. [Verify User Limits](#verify-user-limits)
     1. [Get Delivery Options](#get-delivery-options)
@@ -282,7 +282,7 @@
        }
 ```
 
-## Create Payment
+## Payment Creation
 
 ### Collect Payment Information From User
 
