@@ -294,6 +294,7 @@
   - Addresses (optional for electronic payees)
     - Payee Address
     - Customer Address
+      - Address Example
 
 ```json
 
@@ -327,13 +328,14 @@ Ensure that the payment's amount is within the cached limits.
   - HTTP GET `https://{api}/tellerOptions?payToName={payToName}&accountNumber={accountNumber}`
   - Display options for user to select
   - Store Id of selected option
-    - If the selected option isElectronic property = false
+    - If the selected option is **not** electronic e.g. `isElectronic = false`
       - Prompt the user for valid addresses
         - Pay to address aka the address of the payee or biller
         - Pay from address aka the customer's address
+  - Example Delivery Options Response
+    - Note: The DeliveryDates arrays have been truncated for this example but will contain values for 365 days
 
 ```json
-// Example Delivery Options Response
 {
   "$id": "1",
   "$values": [{
@@ -401,7 +403,6 @@ Ensure that the payment's amount is within the cached limits.
             "Description1": "Standard US Mail",
             "Description2": "Delivered by 3/28/2017\r\nFor a fee of $0.00"
           }
-          // array truncated for example but will contain values for 365 days
         ]
       },
       "NetworkBillerId": "",
@@ -535,7 +536,6 @@ Ensure that the payment's amount is within the cached limits.
             "Description1": "Standard",
             "Description2": "Delivered by 3/23/2017\r\nFor a fee of $0.00"
           }
-          // array truncated for example but will contain values for 365 days
         ]
       },
       "NetworkBillerId": "0000000708",
