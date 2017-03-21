@@ -107,7 +107,7 @@
 ```cs
 
     // psuedo code
-    let x = BCrypt(plaintext, salt)
+    let x = BCrypt(password, salt)
     let hash = SHA256(x)
     result = HMACSHA1(hash,privateKey)
 ```
