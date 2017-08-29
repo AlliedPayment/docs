@@ -23,6 +23,18 @@
     - Set Key = `Name`
     - Set Value = `<Some Identifier>` example `Nate Test`
 
+- TODO figure out how to set up code deploy
+  - Brian added the following to the instance config somewhere
+
+``` xml
+<powershell>
+wget https://s3.amazonaws.com/cloudformation-examples/aws-cfn-bootstrap-latest.msi -outfile aws-cfn-bootstrap-latest.msi
+Start-Process msiexec.exe -Wait -ArgumentList '/I aws-cfn-bootstrap-latest.msi /quiet'
+wget  https://aws-codedeploy-us-east-2.s3.amazonaws.com/latest/codedeploy-agent.msi -outfile codedeploy-agent.msi
+Start-Process msiexec.exe -Wait -ArgumentList '/I codedeploy-agent.msi /quiet'
+</powershell>
+```
+
 - Click Launch
 
 
