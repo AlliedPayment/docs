@@ -1,4 +1,4 @@
-# Processing Knowlege Base (PKB)
+# Processing Knowledge Base (PKB)
 
 ## Table Of Contents
 - [PKB-1 - Can't view check file or check file is missing](#pkb-1)
