@@ -1,7 +1,7 @@
 # Final Knowledge Base (FKB)
 
 ## Table Of Contents
-- [FKB-1 - Can't view check file or check file is missing](#pkb-1)
+- [FKB-1 - Users cannot log into SmallbizMVC](#fkb-1)
 
 ## FKB-1
 
