@@ -1,12 +1,12 @@
 # Processing Knowlege Base (PKB)
 
 ## Table Of Contents
-- [PKB-1 - Can't view check file or check file missing](#pkb-1)
+- [PKB-1 - Can't view check file or check file is missing](#pkb-1)
 - [PKB-2 - An admin tried to initiate a network send but nothing appears to be happening](#pkb-2)
 
 ## PKB-1
 
-### Can't View Check file or check file missing
+### Can't view check file or check file is missing
 
 1. Navigate to the production queues UI to start troubleshooting.
     - [http://queues.service.consul:15672/#/queues](http://queues.service.consul:15672/#/queues)
