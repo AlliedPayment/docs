@@ -21,9 +21,9 @@
     - Sort the files in descending order by the `LastModified` column
       - Is the top file from today? 
         - Is the timestamp correct for the targeted check run? (if running 3pm checks the file shouldn't be for 11am)
-          - You should be able to `"View Checks"` and `"Send File"` via Allied Admin's Network File Management.
+          - If so then, you should be able to `"View Checks"` and `"Send File"` via Allied Admin's Network File Management.
       - If not, wait for approximately 15 mins (checking S3 in the interim).
-        - If no file becomes available after 15 mins "retrigger" the check file creation by clicking on `"Create Checks"` via Allied Admin's Network File Management -> Payment Files Not Sent
+        - If no file becomes available after 15 mins, "retrigger" the check file creation by clicking on `"Create Checks"` via Allied Admin's Network File Management -> Payment Files Not Sent
 
 ## PKB-2
 
