@@ -38,4 +38,5 @@
        - Look for anything in this table
        - If ***anything*** is in the table it is processing or is partially processed. 
          - This table ***MUST*** be emptied before allowing the admin to try again.
-   4. Look at all non paper payments that are suppose to network send today and make sure they look ok ( ***No network send batch id*** )
+  4. Look at all non paper payments that are suppose to network send today and make sure they look ok ( ***No network send batch id*** )
+  5. Instruct the admin to retry the ***network send***
