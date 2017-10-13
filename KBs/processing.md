@@ -2,7 +2,7 @@
 
 ## Table Of Contents
 - [PKB-1 - Can't view check file or check file is missing](#pkb-1)
-- [PKB-2 - Can't view check file or check file is missing](#pkb-2)
+- [PKB-2 - Check PDF is empty](#pkb-2)
 - [PKB-3 - An admin tried to initiate a network send but nothing appears to be happening](#pkb-3)
 
 ## PKB-1
