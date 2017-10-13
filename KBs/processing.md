@@ -2,7 +2,8 @@
 
 ## Table Of Contents
 - [PKB-1 - Can't view check file or check file is missing](#pkb-1)
-- [PKB-2 - An admin tried to initiate a network send but nothing appears to be happening](#pkb-2)
+- [PKB-2 - Can't view check file or check file is missing](#pkb-2)
+- [PKB-3 - An admin tried to initiate a network send but nothing appears to be happening](#pkb-3)
 
 ## PKB-1
 
@@ -24,13 +25,15 @@
           - If so then, you should be able to `"View Checks"` via Allied Admin's Network File Management.
       - If not, wait for approximately 15 mins (checking S3 in the interim).
         - If no file becomes available after 15 mins, "retrigger" the check file creation by clicking on `"Create Checks"` via Allied Admin's Network File Management -> Payment Files Not Sent
-        
+
+## PKB-2
+
 ### Check PDF is empty
 
 1. On the allied admin network file management page click the Create Checks button to recreate the PDF
     - System will overwrite the existing bad PDF
 
-## PKB-2
+## PKB-3
 
 ### An admin tried to initiate a network send but nothing appears to be happening
 
