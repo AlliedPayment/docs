@@ -11,13 +11,13 @@
 
 1. Navigate to the production queues UI to start troubleshooting.
     - [http://queues.service.consul:15672/#/queues](http://queues.service.consul:15672/#/queues)
-2. Check the `allied.admin.bulk` queue to verify if it's still working through messages.
+1. Check the `allied.admin.bulk` queue to verify if it's still working through messages.
     - There will be 1 message per check plus an additional message to create the file.
     - If there are a bunch of messages in the queue, the queue has consumers, and the messages are being handled in a timely manner simply wait for the messages to be processed.
-3. Check the `allied.admin.bulk.Error` queue.
+1. Check the `allied.admin.bulk.Error` queue.
     - Inpsect any messages that are in the queue.
       - Note the timestamp of the message you are inspecting. Is the message relevant to your current issue?
-4. Once the messages are all processed and there are not any relevant error messages in the error queue you can check if the check file exists in S3.
+1. Once the messages are all processed and there are not any relevant error messages in the error queue you can check if the check file exists in S3.
     - Using an S3 file explorer [utility](http://s3browser.com/), navigate to the `allied.checks.prod` bucket.
     - Sort the files in descending order by the `LastModified` column
       - Is the top file from today? 
