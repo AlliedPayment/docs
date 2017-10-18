@@ -2,7 +2,8 @@
 
 ## Table Of Contents
 - [FKB-1 - How to remove payment and ACH files from final](#fkb-1)
-- [FKB-2 - Users cannot log into SmallbizMVC](#fkb-2)
+- [FKB-2 - How to reset payments for ACH testing in final](#fkb-2)
+- [FKB-3 - Users cannot log into SmallbizMVC](#fkb-3)
 
 ## FKB-1
 
@@ -29,6 +30,35 @@ select Count(*) from ACHFiles
 ```
 
 ## FKB-2
+
+### How to reset payments for ACH testing in final
+
+1. Connect to `final` DB via using [SQL Server Management Studio](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms)
+1. Open a `New Query Window`         
+![New Query Location Image](https://raw.githubusercontent.com/AlliedPayment/Documentation/master/assets/new-query.PNG?token=AGnIbW9oVZA9Vpjd5YBcbADfYvY1nh0aks5Z8KD4wA%3D%3D)         
+1. Copy, paste the script below into the query window
+1. Update the `@date` variable to the target date
+1. Execute the query
+
+``` sql
+-- scope scipt to final only
+Use Final
+
+-- target date variable
+declare @date as nvarchar(50)
+set @date = 'TODO_ENTER_DATE_STRING_HERE' -- use format like 7/11/2017
+
+-- clear collection batch ids 
+Update Payments Set Status = 'processing', CollectionBatch_Id = '00000000-0000-0000-0000-000000000000' , IsFeeCollected = 0 Where CollectionDate = @date and achpattern in ('billpay-biller','single','ach','loan')
+
+-- clear settlement batch ids
+Update Payments Set Status = 'processing', SettlementBatch_Id  = '00000000-0000-0000-0000-000000000000' , IsFeeCollected = 0 Where SettlementDate = @date and achpattern in ('billpay-biller','single','ach','loan')
+
+-- clear settlement batch ids
+Update Payments Set Status = 'processing', NetworkSendBatch_Id = '00000000-0000-0000-0000-000000000000' , IsFeeCollected = 0 Where NetworkSendDate = @date and achpattern in ('billpay-biller','single','ach','loan')
+```
+
+## FKB-3
 
 ### Users cannot log into SmallbizMVC
 
