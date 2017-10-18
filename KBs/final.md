@@ -1,9 +1,34 @@
 # Final Knowledge Base (FKB)
 
 ## Table Of Contents
-- [FKB-1 - Users cannot log into SmallbizMVC](#fkb-1)
+- [FKB-1 - How to remove payment and ACH files from final](#fkb-1)
+- [FKB-2 - Users cannot log into SmallbizMVC](#fkb-2)
 
 ## FKB-1
+
+### How to remove payment and ACH files from final
+
+1. Connect to `final` DB via using [SQL Server Management Studio](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms)
+1. Open a `New Query Window`         
+![New Query Location Image](https://raw.githubusercontent.com/AlliedPayment/Documentation/master/assets/new-query.PNG?token=AGnIbW9oVZA9Vpjd5YBcbADfYvY1nh0aks5Z8KD4wA%3D%3D)         
+1. Copy, paste, & execute the SQL script below 
+
+``` sql
+-- scope scipt to final only
+use Final
+
+-- Count before truncate
+select Count(*) from ACHFiles
+
+-- Delete all rows from table
+truncate table ACHFiles
+
+-- Count after truncate (should be 0)
+select Count(*) from ACHFiles
+
+```
+
+## FKB-2
 
 ### Users cannot log into SmallbizMVC
 
