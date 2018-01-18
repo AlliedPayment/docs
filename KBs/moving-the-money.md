@@ -1,4 +1,4 @@
-# Money Movement Knowlege Base (MMKB)
+# Money Movement Knowlege Base
 
 ## Table Of Contents
 
