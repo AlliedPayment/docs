@@ -1,4 +1,16 @@
-# How The Money Moves
+# Money Movement Knowlege Base (MMKB)
+
+## Table Of Contents
+
+* [Daily Jobs](#daily-jobs)
+* [Funding Models](#funding-models)
+* [Picture Payments](#picture-payments)
+* [Templates](#templates)
+* [Regional Billers](#regional-billers)
+* [ACH](#ach)
+* [P2P](#p2p)
+* [Fees](#fees)
+* [Rejected Payments](#rejected-payments)
 
 ## Daily Jobs
 
@@ -67,21 +79,17 @@ An fi may have an multiple options that are of each funding model type (risk vs 
 
 Days Offset
 
-```
- Collect 0
- Settle 0
- Network Send 0
-```
+    Collect 0
+    Settle 0
+    Network Send 0
 
 ### Good Funds
 
 Days Offset
 
-```
-Collect 0
-Settle 0
-Network Send 1
-```
+    Collect 0
+    Settle 0
+    Network Send 1
 
 ## Picture Payments
 
@@ -116,11 +124,9 @@ Debit the customers, credit (during collection) allied's operating account
 
 ### Direct ACH
 
-```
-Collect 0
-Settle 0
-Network Send X
-```
+    Collect 0
+    Settle 0
+    Network Send X
 
 * Go direclty to the Fis clearing account
   * never touches Allied's accounts
@@ -135,11 +141,9 @@ These files are the output of payment processing.
 
 ## P2P
 
-```
-Collect 0
-Settle 0
-Network Send 0
-```
+    Collect 0
+    Settle 0
+    Network Send 0
 
 Network send is sent to the P2P network (Aculync). The P2P network hits a callback via our REST API that informs Allied if the payment was accepted, recjected, or timed out.
 
@@ -151,4 +155,4 @@ They can be summed up for the month and 1 single fee is changed to the user.
 
 ## Rejected Payments
 
-![PaymentRejectionImage](https://raw.githubusercontent.com/AlliedPayment/Documentation/master/Workflows/payment_rejections.jpeg?token=AGnIbV4mJPiA0eh8H2dRzdK7m7YOh_fyks5aZ4ivwA%3D%3D)
+![PaymentRejectionImage](https://raw.githubusercontent.com/AlliedPayment/Documentation/master/KBs/assets/payment_rejections.jpeg?token=AGnIbV4mJPiA0eh8H2dRzdK7m7YOh_fyks5aZ4ivwA%3D%3D)
