@@ -20,6 +20,8 @@ HTTP POST
 
 ### Request Body
 
+#### Source Code
+
 ``` c#
 namespace Allied.Domain.DTOs{
 
@@ -32,7 +34,7 @@ namespace Allied.Domain.DTOs{
 
 ```
 
-#### Example
+#### JSON Example
 
 ``` json
 {
@@ -43,12 +45,16 @@ namespace Allied.Domain.DTOs{
 
 ### Sample
 
+Request Headers
+
 ``` http
 POST https://api.demo.alliedpayment.com/payments/11111111-2222-3333-4444-555555555555/networkreject HTTP/1.1
 Accept: application/json;
 Content-Type: application/json;
 Authorization: TIMESTAMP domain=<DOMAIN>;timestamp=<TIMESTAMP>;signature=<SIGNATURE>;publickey=<KEY>;
 ```
+
+Request Body
 
 ``` json
 {
