@@ -2,11 +2,12 @@
 
 ## Purpose
 
-The Network Rejection API should be used to inform the system that a payment network rejected a payment. The payment network must provide the payment’s ID and a reason why the payment was rejected. The system will reject the payment corresponding with the provided ID, and add the reason to the payment’s notes in the following format: network name, payment id, original payment's creation date (dd.mm.yy).  The system will create a new payment based on the rejected payment’s data and add a note in the following format: network name, payment id, new payment's creation date (dd,mm,yy).  The new payment will be configured to not use the same network that rejected the original payment.
+The Network Rejection API should be used to inform the system that a payment network rejected a payment. The payment network must provide the payment’s ID and a reason why the payment was rejected. The system will reject the payment corresponding with the provided ID, and add the reason to the payment’s notes in the following format: network name, payment id, original payment's creation date `dd.mm.yy`.  The system will create a new payment based on the rejected payment’s data and add a note in the following format: network name, payment id, new payment's creation date `dd,mm,yy`.  The new payment will be configured to not use the same network that rejected the original payment.
 
-Additional notes:
-No work being done to add or manipulate the status of the original payment. 
-FI Admin and Allied Admin functionality will remain as if both payments were entered from the front end of the system by a user.
+### Additional notes
+
+* No changes required for FI Admin and Allied Admin
+* No work being done to manage the status of the original payment
 
 ## Endpoint
 
