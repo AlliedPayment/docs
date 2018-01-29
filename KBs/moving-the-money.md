@@ -155,4 +155,4 @@ They can be summed up for the month and 1 single fee is changed to the user.
 
 ## Rejected Payments
 
-![PaymentRejectionImage](https://raw.githubusercontent.com/AlliedPayment/Documentation/master/KBs/assets/payment_rejections.jpeg?token=AGnIbTbZIKjXnCXVHHwdk7Hm8V0Bh4tzks5aal7-wA%3D%3D)
+![PaymentRejectionImage](https://raw.githubusercontent.com/AlliedPayment/Documentation/master/KBs/assets/payment_rejections.jpeg?token=AGnIbRnd9zgP-5VxEJmDtVtl1ubhuqqAks5aeNJlwA%3D%3D)

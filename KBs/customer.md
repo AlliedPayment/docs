@@ -19,4 +19,4 @@ If a payment has only been collected the customer can still cancel, because we c
 
 ## Diagram
 
-![CustomerAggregateRoot](https://raw.githubusercontent.com/AlliedPayment/Documentation/master/KBs/assets/customer_agg_root.png?token=AGnIbVWnMMxkeN1Oe495WO3pPKxu3WbGks5aal1zwA%3D%3D)
+![CustomerAggregateRoot](https://raw.githubusercontent.com/AlliedPayment/Documentation/master/KBs/assets/customer_agg_root.png?token=AGnIbQrzcRHz4836bnfq2qne4CWMcyaTks5aeNJiwA%3D%3D)
