@@ -1,4 +1,4 @@
-# Allied's Authorization Header
+# Authorization Header
 
 ## API Keys
 
