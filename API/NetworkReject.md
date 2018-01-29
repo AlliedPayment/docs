@@ -2,23 +2,23 @@
 
 ## Purpose
 
-The Network Rejection api should be used to inform the system that a payment network rejected a payment. The payment network must provide the payment's ID and a reason why the payment was rejected. The system should then reject the payment coresponding with the provided ID, and add the reason to the payment's notes. Then the system should create a new payment based on the rejected payment's data. The new payment should be configured to not use the same network that rejected the original payment. 
+The Network Rejection api should be used to inform the system that a payment network rejected a payment. The payment network must provide the payment's ID and a reason why the payment was rejected. The system should then reject the payment coresponding with the provided ID, and add the reason to the payment's notes. Then the system should create a new payment based on the rejected payment's data. The new payment should be configured to not use the same network that rejected the original payment.
 
-### Endpoint
+## Endpoint
 
 `https://<api>/payments/<id>/networkreject`
 
-### Method
+## Method
 
 HTTP POST
 
-### Headers
+## Headers
 
 * Accept: application/json
 * Content-Type: application/json
 * Authorization: [See Allied authorization documentation](http://alliedpayment.github.io/Documentation/API/Authorization)
 
-### Source Code
+## Source Code
 
 ``` c#
 namespace Allied.Domain.DTOs{
@@ -32,17 +32,7 @@ namespace Allied.Domain.DTOs{
 
 ```
 
-### Request Body
-
-#### JSON Example
-
-``` json
-{
-    "reason":"Why the payment was rejected. This message will be attached to the payment's notes."
-}
-```
-
-### Sample
+## Example
 
 Request Headers
 
