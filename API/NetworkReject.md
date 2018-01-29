@@ -2,7 +2,7 @@
 
 ## Purpose
 
-The Network Rejection api should be used to inform the system that a payment network rejected a payment. The payment network must provide the payment's ID and a reason why the payment was rejected. The system should then reject the payment coresponding with the provided ID, and add the reason to the payment's notes. Then the system should create a new payment based on the rejected payment's data. The new payment should be configured to not use the same network that rejected the original payment.
+The Network Rejection application interface should be used to inform the system that a payment network rejected a payment. The payment network must provide the payment's ID and a reason why the payment was rejected. The system will reject the payment corresponding with the provided ID and add the reason to the payment's notes. The system will create a new payment based on the rejected payment's data. The new payment will be configured to not use the same network that rejected the original payment.
 
 ## Endpoint
 
