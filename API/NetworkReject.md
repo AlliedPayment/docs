@@ -18,15 +18,13 @@ HTTP POST
 * Content-Type: application/json
 * Authorization: [See Allied authorization documentation](http://alliedpayment.github.io/Documentation/API/Authorization)
 
-### Request Body
-
-#### Source Code
+### Source Code
 
 ``` c#
 namespace Allied.Domain.DTOs{
 
     class NetworkReject{
-        public Id:Guid {get;set;}
+        public Id:Guid {get;set;} // from URI
         public Reason:string {get;set;}
     }
 
@@ -34,11 +32,12 @@ namespace Allied.Domain.DTOs{
 
 ```
 
+### Request Body
+
 #### JSON Example
 
 ``` json
 {
-    "id":"00000000-0000-0000-0000-000000000000",
     "reason":"Why the payment was rejected. This message will be attached to the payment's notes."
 }
 ```
@@ -58,7 +57,6 @@ Request Body
 
 ``` json
 {
-    "id":"11111111-2222-3333-4444-555555555555",
     "reason":"Why the payment was rejected. This message will be attached to the payment's notes."
 }
 ```
