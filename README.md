@@ -1,5 +1,3 @@
-# Allied Payment Documentation
-
 ## API
 
 * [Authorization](http://alliedpayment.github.io/Documentation/API/Authorization)
