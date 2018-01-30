@@ -11,7 +11,7 @@ The Network Rejection API should be used to inform the system that a payment net
 
 ## Endpoint
 
-`https://<api>/payments/<id>/networkreject`
+`https://<api>/payments/<paymentId>/networkreject`
 
 ## Method
 
@@ -29,7 +29,6 @@ HTTP POST
 namespace Allied.Domain.DTOs{
 
     class NetworkReject{
-        public Id:Guid {get;set;} // from URI
         public Reason:string {get;set;}
     }
 
