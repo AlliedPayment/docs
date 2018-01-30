@@ -1,3 +1,5 @@
+# Table Of Contents
+
 ## API
 
 * [Authorization](http://alliedpayment.github.io/docs/API/Authorization)
