@@ -39,6 +39,8 @@ namespace Allied.Domain.DTOs{
 
 * HTTP 200 (OK)
   * Payment was rejected successfully
+* HTTP 400 (Bad Request)
+  * The request is invalid. Check the response body for the validation error, and example usage.
 * HTTP 404 (Not Found)
   * A payment with the given ID was not found.
 * HTTP 406 (Not Acceptable)
