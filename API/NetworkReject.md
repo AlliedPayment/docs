@@ -2,7 +2,7 @@
 
 ## Purpose
 
-The Network Rejection API should be used to inform the system that a payment network rejected a payment. The payment network must provide the payment’s ID and a reason why the payment was rejected. The system will reject the payment corresponding with the provided ID, and add the reason to the payment’s notes in the following format: network name, payment id, original payment's creation date `dd.mm.yy`.  The system will create a new payment based on the rejected payment’s data and add a note in the following format: network name, payment id, new payment's creation date `dd,mm,yy`.  The new payment will be configured to not use the same network that rejected the original payment.
+The Network Rejection API should be used to inform the system that a payment network rejected a payment. The payment network must provide the payment’s ID and a reason why the payment was rejected. The system will reject the payment corresponding with the provided ID, and add the reason to the payment’s notes in the following format: recreated payment's network name, payment id, creation date `dd.mm.yy`.  The system will create a new payment based on the rejected payment’s data and add a note in the following format: network name, payment id, new payment's creation date `dd.mm.yy`.  The new payment will be configured to not use the same network that rejected the original payment.
 
 ### Additional notes
 
@@ -21,7 +21,7 @@ HTTP POST
 
 * Accept: application/json
 * Content-Type: application/json
-* Authorization: [See Allied authorization documentation](http://alliedpayment.github.io/Documentation/API/Authorization)
+* Authorization: [See Allied authorization documentation](http://alliedpayment.github.io/docs/api/Authorization)
 
 ## Source Code
 
