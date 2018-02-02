@@ -8,6 +8,7 @@
 * [Multi-Factor Authentication](http://alliedpayment.github.io/docs/API/MFA)
 * [PicturePay](http://alliedpayment.github.io/docs/API/PicturePay)
 * [Limits](http://alliedpayment.github.io/docs/API/Limits)
+* [Environments](http://alliedpayment.github.io/docs/API/environments)
 
 ## Products
 
