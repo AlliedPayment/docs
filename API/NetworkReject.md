@@ -11,9 +11,9 @@ The Network Rejection API should be used to inform the system that a payment net
 
 ## Endpoint
 
-`https://`[\<api>](http://alliedpayment.github.io/docs/api/environments)`/payments/<paymentId>/networkreject`
+`https://<api>/payments/<paymentId>/networkreject`
 
-
+[See Environment Info](http://alliedpayment.github.io/docs/api/environments)
 
 ## Method
 
