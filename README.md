@@ -12,4 +12,6 @@
 
 ## Products
 
-* [Teller](http://alliedpayment.github.io/docs/Products/teller)
+* [Teller](http://alliedpayment.github.io/docs/products/teller)
+* [Portal Pay](http://alliedpayment.github.io/docs/products/portalpay)
+* [Flex Pay](http://alliedpayment.github.io/docs/products/flexpay)
