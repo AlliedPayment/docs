@@ -12,4 +12,4 @@
 
 ## Products
 
-* [Teller](http://alliedpayment.github.io/docs/Products/TellerPayments)
+* [Teller](http://alliedpayment.github.io/docs/Products/teller)
