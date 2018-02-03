@@ -24,7 +24,7 @@ Allows partners & financial institutions to test converted data from previous bi
 
 Allied partner integration test environment.
 
-Allows partners to interact with Allied's system (API & UI) in an environment that is configured ***NOT** to move money.
+Allows partners to interact with Allied's system (API & UI) in an environment that is configured **NOT** to move money.
 
 ***Location***
 
