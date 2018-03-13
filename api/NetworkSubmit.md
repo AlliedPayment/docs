@@ -76,8 +76,6 @@ namespace Allied.Services.ForBillHero.Web.Requests {
   * Could not get lock on idempotency key
 * HTTP 400 (Bad Request)
   * Could not find account information.
-* HTTP 406 (Not Acceptable)
-  * Allied is unable to route the payment electronically, and therefore will not accept the reject.
 * HTTP 500 (Internal Server Error)
   * An unexpected error occurred while handling the request.
     * Contact [Development Support](mailto:developmentsupport@alliedpayment.com) if you continue to get this response.
