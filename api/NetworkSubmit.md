@@ -1,26 +1,13 @@
 
-# Network Reject API
+# Network Payment Submission API
 
 ## Purpose
 
-The Network Rejection API should be used to inform the system that a payment network rejected a payment. The payment network must provide the payment’s ID and a reason why the payment was rejected. The system will locate the payment corresponding with the provided ID, and add the reason to the payment’s notes in the following format
-
-`Recreated payment's network name, recreated payment's id, recreated payment's creation date (dd.mm.yy)`  
-
-The system will create a new payment based on the rejected payment’s data and add a note in the following format. 
-
-`Rejected network name, rejected payment id, rejected payment's creation date (dd.mm.yy)`  
-
-The new payment will be configured to not use the same network that rejected the original payment.
-
-### Additional notes
-
-* No changes required for FI Admin and Allied Admin
-* No work being done to manage the status of the original payment
+The Network Payment Submission API should be used to create a single payment. The system will create a new payment based on the supplied information in the BillHeroPaymentRequest object.
 
 ## Endpoint
 
-`https://<api>/payments/<paymentId>/networkreject`
+`https://<api>/billhero/payments`
 
 [See Environment Info](http://alliedpayment.github.io/docs/api/environments)
 
@@ -37,44 +24,65 @@ HTTP POST
 ## Source Code
 
 ``` c#
-namespace Allied.Domain.DTOs{
+namespace Allied.Services.ForBillHero.Web.Requests
+{
+    public class BillHeroPaymentRequest : BasePaymentRequest 
+    {
+        public string PayToName { get; set; }
+        public Address PayToAddress { get; set; }
+        public string PayToAccountNumber { get; set; }
+        public string PayToPhoneNumber { get; set; }
+        public string PayToEmailAddress { get; set; }
 
-    class NetworkReject{
-        public Reason:string {get;set;}
+        // Customer in this context is the person who's name is on the bill at the biller.
+        public string CustomerName { get; set; }
+        public Address CustomerAddress { get; set; }
+        public string CustomerEmailAddress { get; set; }
+
+        public override HttpResult GetAccountInfo(UserService svc, out UserService.AccountInfo info)
+        {
+            return svc.GetAccountInfo(this, out info);
+        }
     }
+}
+```
 
+``` c#
+namespace Allied.Services.ForBillHero.Web.Requests {
+
+    [PutDtoInBody]
+    public abstract class BasePaymentRequest : IReturn<Models.BillHeroPayment>
+    {
+        
+        public decimal Amount { get; set; }
+        public string AchReferenceNumber { get; set; }
+        public string ETag { get; set; }
+
+        public DateTime? ScheduleOn { get; set; }
+        public Guid? DeliveryOptionId { get; set; }
+
+        public abstract HttpResult GetAccountInfo(UserService svc, out UserService.AccountInfo info);
+
+        public Dictionary<string, string> Tags { get; set; }
+        public string Note { get; set; }
+        protected BasePaymentRequest()
+        {
+            Tags = new Dictionary<string, string>();
+        }
+    }
 }
 ```
 
 ## Possible Responses
 
 * HTTP 200 (OK)
-  * Payment was rejected successfully
+  * Payment was created successfully
+* HTTP 409 (Conflict)
+  * Could not get lock on idempotency key
 * HTTP 400 (Bad Request)
-  * The request is invalid. Check the response body for the validation error, and example usage.
-* HTTP 404 (Not Found)
-  * A payment with the given ID was not found.
+  * Could not find account information.
 * HTTP 406 (Not Acceptable)
   * Allied is unable to route the payment electronically, and therefore will not accept the reject.
 * HTTP 500 (Internal Server Error)
   * An unexpected error occurred while handling the request.
     * Contact [Development Support](mailto:developmentsupport@alliedpayment.com) if you continue to get this response.
-
-## Example
-
-Request Headers
-
-``` http
-POST https://api.demo.alliedpayment.com/payments/11111111-2222-3333-4444-555555555555/networkreject HTTP/1.1
-Accept: application/json;
-Content-Type: application/json;
-Authorization: TIMESTAMP domain=<DOMAIN>;timestamp=<TIMESTAMP>;signature=<SIGNATURE>;publickey=<KEY>;
-```
-
-Request Body
-
-``` json
-{
-    "reason":"Why the payment was rejected. This message will be attached to the payment's notes."
-}
-```
