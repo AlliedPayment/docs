@@ -38,11 +38,6 @@ namespace Allied.Services.ForBillHero.Web.Requests
         public string CustomerName { get; set; }
         public Address CustomerAddress { get; set; }
         public string CustomerEmailAddress { get; set; }
-
-        public override HttpResult GetAccountInfo(UserService svc, out UserService.AccountInfo info)
-        {
-            return svc.GetAccountInfo(this, out info);
-        }
     }
 }
 ```
