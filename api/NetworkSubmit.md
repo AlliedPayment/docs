@@ -71,9 +71,11 @@ namespace Allied.Services.ForBillHero.Web.Requests {
 ## Possible Responses
 
 * HTTP 200 (OK)
-  * Payment was created successfully
+  * Payment was created successfully.
+* HTTP 406 (Not Acceptable)
+  * Could not create payment.
 * HTTP 409 (Conflict)
-  * Could not get lock on idempotency key
+  * Could not get lock on idempotency key.
 * HTTP 400 (Bad Request)
   * Could not find account information.
 * HTTP 500 (Internal Server Error)
