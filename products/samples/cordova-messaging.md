@@ -1,9 +1,12 @@
 See source code below.
 
-See full sample application with source here: https://github.com/AlliedPayment/sample-sso-cordova
+[See full sample application with source here](https://github.com/AlliedPayment/sample-sso-cordova
+)
 
 ```js
-var Config = { origin: "https://domain.demo.alliedpayment.com" }; // todo replace "domain" with domain of Fi
+// todo replace "domain" with domain of Fi
+var Config = { origin: "https://domain.demo.alliedpayment.com" };
+
 var Messaging = (function (config, self) {
     var iframe, options;
     var url = config.origin;
